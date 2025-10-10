@@ -1,0 +1,58 @@
+# ============================
+# .gitignore for Apache Airflow
+# ============================
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+*.egg-info/
+*.egg
+*.log
+
+# --- Airflow specific directories ---
+airflow.db
+airflow-webserver.pid
+logs/
+dags/__pycache__/
+plugins/__pycache__/
+unittests.cfg
+
+# --- Local environment ---
+.env
+.env.*
+.venv/
+venv/
+.envrc
+.idea/
+.vscode/
+*.swp
+
+# --- Docker / Compose ---
+docker-compose.override.yml
+.dockerignore
+.airflow/
+tmp/
+build/
+*.pid
+*.sock
+
+# --- SQLite (local metadata DB) ---
+*.db
+*.db-journal
+
+# --- Airflow config & secrets ---
+airflow.cfg
+webserver_config.py
+fernet_key.txt
+variables.json
+connections.json
+
+# --- OS generated files ---
+.DS_Store
+Thumbs.db
+
+# --- Jupyter or notebooks (optional) ---
+*.ipynb_checkpoints/

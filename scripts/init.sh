@@ -23,11 +23,11 @@ sudo chown -R 50000:50000 ./dags ./logs ./plugins ./config
 
 # Initialiser la base de données Airflow
 echo "🗄️ Initialisation de la base de données..."
-docker-compose run --rm airflow-webserver airflow db init
+docker compose run --rm airflow-webserver airflow db init
 
 # Créer un utilisateur admin (si non existant)
 echo "👤 Création de l'utilisateur administrateur..."
-docker-compose run --rm airflow-webserver airflow users create \
+docker compose run --rm airflow-webserver airflow users create \
     --username admin \
     --firstname Admin \
     --lastname User \
@@ -37,7 +37,7 @@ docker-compose run --rm airflow-webserver airflow users create \
 
 # Démarrer les services
 echo "🚀 Démarrage d'Airflow..."
-docker-compose up -d
+docker compose up -d
 
 echo ""
 echo "✅ Airflow est en cours de démarrage..."
