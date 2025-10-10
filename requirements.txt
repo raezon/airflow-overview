@@ -1,0 +1,18 @@
+# Version fixée d'Airflow pour correspondre à ton image
+apache-airflow==2.9.1
+
+# Extras utiles pour le monitoring, les logs et l'analyse
+apache-airflow[postgres]==2.9.1
+apache-airflow[celery]==2.9.1
+apache-airflow[http]==2.9.1
+
+# Librairies additionnelles pratiques pour les tasks Python
+pandas==2.2.2
+requests==2.32.3
+plotly==5.24.1
+python-dotenv==1.0.1
+
+# Optionnel : pour debug, qualité de code et tests
+pytest==8.3.3
+black==24.8.0
+flake8==7.1.1
